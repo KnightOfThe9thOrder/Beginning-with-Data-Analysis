@@ -1,0 +1,22 @@
+import pandas as pd
+#Now with individual lists
+course=['Python', 'R', 'Strata', 'Excel', 'Java']
+day=['Monday','Tuesday','Wednesday','Thursday','Friday']
+price=[50, 40, 20, 10, 30]
+sale=[2,3,4,5,7]
+#Now creating descriptive names for each name
+label=["Course Name", "Day", "Price", "No. of Sales"]
+#Putting the different lists together
+coloumns=[course,day,price,sale]
+#Putting list within list
+courses_sales=list(zip(label,coloumns))
+print (courses_sales)
+#Changing to dictionary as the above data is a list
+cs=dict(courses_sales)
+#Converting it to DataFrame
+Sales_data=pd.DataFrame(cs)
+print(" ")
+print(Sales_data)
+#Now let us try to put in a small array within the DataFrame
+Sales_data['Countries']='England'
+print(Sales_data)
