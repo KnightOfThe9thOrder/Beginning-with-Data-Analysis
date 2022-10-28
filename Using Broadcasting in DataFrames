@@ -1,0 +1,9 @@
+import pandas as pd
+city=["Kolkata","Chennai","Delhi","Mumbai"]
+#Create a new string India
+country="India"
+#Create dictionary
+data={'Country': country, 'City': city}
+#Create DataFrame
+City_Info=pd.DataFrame(data)
+print(City_Info)
