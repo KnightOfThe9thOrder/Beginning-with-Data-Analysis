@@ -1,0 +1,26 @@
+import pandas as pd
+course_sales={'course':['Python', 'R', 'Strata', 'Excel', 'Java'],
+              'day':['Monday','Tuesday','Wednesday','Thursday','Friday'],
+              'price':[50, 40, 20, 10, 30],
+              'sale':[2,3,4,5,7]}
+#Convert it to DataFrame
+df_sales=pd.DataFrame(course_sales)
+print(df_sales)
+#Now with individual lists
+course=['Python', 'R', 'Strata', 'Excel', 'Java']
+day=['Monday','Tuesday','Wednesday','Thursday','Friday']
+price=[50, 40, 20, 10, 30]
+sale=[2,3,4,5,7]
+#Now creating descriptive names for each name
+label=["Course Name", "Day", "Price", "No. of Sales"]
+#Putting the different lists together
+coloumns=[course,day,price,sale]
+#Putting list within list
+courses_sales=list(zip(label,coloumns))
+print (courses_sales)
+#Changing to dictionary as the above data is a list
+cs=dict(courses_sales)
+#Converting it to DataFrame
+Sales_data=pd.DataFrame(cs)
+print(" ")
+print(Sales_data)
