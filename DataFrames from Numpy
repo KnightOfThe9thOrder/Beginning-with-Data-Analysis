@@ -1,0 +1,15 @@
+import numpy as np
+import pandas as pd
+#Singular array and arange takes the starting value and total number of values
+num_array=np.arange(0,10)
+print(num_array)
+#Breaking the array into 2 rows and 5 coloumns with function reshape
+num_array1=np.arange(0,10).reshape(2,5)
+print(num_array1)
+#Creating dataframe from the existing numpy matrix
+df=pd.DataFrame(data=num_array1)
+print(df)
+print(" ")
+#Creating dataframe with specific names of coloumn
+df1=pd.DataFrame(data=num_array1,columns=['L','I','V','E','S'])
+print (df1)
