@@ -1,0 +1,12 @@
+import pandas as pd
+df= pd.read_csv(r"C:\Users\Personal\github\python_pandas\sample_data\02 Introduction to Pandas\intel.csv")
+open=df['Open']
+print("What Open Has:")
+print(open)
+print("What type of values Open has:")
+print(type(open))
+new_open=open.values
+print("Open in array form:")
+print(new_open)
+print("Type of Data:")
+print(type(new_open))
