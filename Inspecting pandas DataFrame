@@ -1,0 +1,25 @@
+import pandas as pd
+df= pd.read_csv(r"C:\Users\Personal\github\python_pandas\sample_data\02 Introduction to Pandas\intel.csv")
+#Print df to make sure it works
+print(df)
+#How to check df type
+print(type(df))
+#How to check df type
+print(df.shape)
+#View coloumn names
+print(df.columns)
+#Inspect first rows of data
+print(df.head())
+#Inspect last rows of data
+print(df.tail())
+#View summary of data info
+print(df.info())
+#View one coloumn named open
+open=df['Open']
+print(open)
+#To view only a few rows of a coloumn
+print(open.head())
+#To view two(or more) coloumns from a dataframe
+print(df[['Open','Close']].head())
+#Using the describe method
+print(df.describe())
