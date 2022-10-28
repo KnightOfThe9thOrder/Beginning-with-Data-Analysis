@@ -1,0 +1,9 @@
+import pandas as pd
+df= pd.read_csv(r"C:\Users\Personal\github\python_pandas\sample_data\02 Introduction to Pandas\intel.csv")
+open_more_40=df['Open']>40
+#This will give results in boolean
+print(open_more_40)
+#The following code will select all rows that are greater than 40
+print(df[open_more_40])
+#Short-cut,i.e,no need to put the information in open_more_40
+print(df[df['Open']>40])
