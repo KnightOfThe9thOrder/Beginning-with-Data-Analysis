@@ -1,0 +1,17 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+stock_prices= pd.read_csv(r"C:\Users\Personal\github\python_pandas\sample_data\03 Data Analysis\intel_amd_stock_prices.csv")
+#Print DataFrame
+print(stock_prices)
+#Create y-columns
+y_columns=['intel','amd']
+#Assign Axis
+stock_prices.plot(x='month',y=y_columns)
+#Give it a title
+plt.title("Monthly Stock Prices")
+#Give y axis a name
+plt.ylabel("Prices")
+#Now present it
+plt.show()
+#Saving it as pdf because I love pdfs
+plt.savefig("Monthly Stock Prices.pdf")
