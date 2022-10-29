@@ -1,0 +1,24 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+df= pd.read_csv(r"C:\Users\Personal\github\python_pandas\sample_data\02 Introduction to Pandas\intel.csv", index_col='Date',parse_dates=True)
+print(df.info())
+print(" ")
+print(df.head())
+#To show the values of Close in graphical form
+close_values=df['Close'].values #Need to create it in an array
+plt.plot(close_values)
+plt.show()
+#The plot function creates the graph and show function displays its
+#Graphing the entire DataFrame
+df.plot()
+plt.show()
+#Graphing only one column of DataFrame with ranges as well
+df['Close'].plot(color='Purple',style='-',legend=True)
+plt.axis(('2017','2019',0,60))
+plt.title("Stock Price")
+plt.xlabel("Dates")
+plt.ylabel("Prices")
+#To save the graph
+plt.savefig("Stock Prices.png")#As png
+plt.savefig("Stock Prices.jpg")#As jpeg
+plt.savefig("Stock Prices.pdf")#As pdf
