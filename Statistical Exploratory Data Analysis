@@ -1,0 +1,13 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+#Import the data file
+stock_prices=pd.read_csv(r"C:\Users\Personal\github\python_pandas\sample_data\03 Data Analysis\tesla.csv")
+#Print DataFrame
+stock_prices
+print(stock_prices.describe())
+#Print the minimum value of Open
+print(stock_prices['Open'].min())
+#Print the maximum value of Open
+print(stock_prices['Open'].max())
+#Print the average/mean of stock prices
+print(stock_prices['Open'].mean())
