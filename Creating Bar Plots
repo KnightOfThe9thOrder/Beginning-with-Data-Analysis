@@ -1,0 +1,16 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+#Import the data file
+stock_prices=pd.read_csv(r"C:\Users\Personal\github\python_pandas\sample_data\03 Data Analysis\intel_stock_price.csv")
+#Print DataFrame
+print(stock_prices)
+#Create bar plot with x-axis=month and y-axis=price
+stock_prices.plot(kind='bar',x='month',y='price')
+#Add title
+plt.title("Stock Prices in months")
+#Add x axis label
+plt.xlabel("Month")
+#Add y axis label
+plt.ylabel("Price")
+#Show it
+plt.show()
