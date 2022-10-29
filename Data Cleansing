@@ -1,0 +1,26 @@
+import pandas as pd
+df=pd.read_csv(r"C:\Users\Personal\github\python_pandas\sample_data\02 Introduction to Pandas\edited_googleplaystore_dataset.csv")
+print(df.info())
+#Python has taken the first row as column label as no specific column label is given
+filepath=(r"C:\Users\Personal\github\python_pandas\sample_data\02 Introduction to Pandas\edited_googleplaystore_dataset.csv")
+#Removing the default header settings
+df=pd.read_csv(filepath,header=None)
+df
+#Now to add column names
+coloumn_names=['App','Rating','Reviews','Size', 'Number of Install', 'Type', 'Price', 'Last Updated']
+df1=pd.read_csv(filepath,header=None, names= coloumn_names)
+df1
+#To remove all -1 from the data
+df2=pd.read_csv(filepath,names=coloumn_names, na_values='-1')
+df2
+#Defining index
+df2.index=df2['Last Updated']
+df2
+#To get only the relevant columns
+new_coloumns=["App","Rating"]
+df3=df2[new_coloumns]
+df3
+#To put out data from python to Excel
+name='Ratings on Google Play'
+df3.to_csv(name)
+df3.to_excel("Ratings Sheet of Google Play.xlsx")
