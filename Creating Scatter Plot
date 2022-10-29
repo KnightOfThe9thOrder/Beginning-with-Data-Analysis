@@ -1,0 +1,16 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+#Import the data file
+life=pd.read_csv(r"C:\Users\Personal\github\python_pandas\sample_data\03 Data Analysis\irish_life_expec.csv")
+#Print DataFrame
+print(life)
+#Create scatter plot with x-axis=year and y-axis=life-expectancy
+life.plot(kind='scatter',x='year',y='life expec')
+#Add title
+plt.title("Irish Life Expectancy")
+#Add x axis label
+plt.xlabel("Age")
+#Add y axis label
+plt.ylabel("Life Expectancy")
+#Show it
+plt.show()
