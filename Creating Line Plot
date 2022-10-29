@@ -11,7 +11,7 @@ stock_prices.plot(x='month',y=y_columns)
 plt.title("Monthly Stock Prices")
 #Give y axis a name
 plt.ylabel("Prices")
-#Now present it
-plt.show()
 #Saving it as pdf because I love pdfs
 plt.savefig("Monthly Stock Prices.pdf")
+#Now present it---Always to remember savefig after show will come blank
+plt.show()
