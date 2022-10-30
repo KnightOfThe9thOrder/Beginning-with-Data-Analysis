@@ -1,0 +1,8 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+stock_price=pd.read_csv(r"C:\Users\Personal\github\python_pandas\sample_data\04 Time Series\intel.csv", parse_dates=True, index_col='Date')
+print(stock_price.head())
+#Get one graph for both Close and Open but more detailed
+stock_price.loc['2017-10-16':'2017-10-20',['Open','Close']].plot(title="Index")
+plt.ylabel("Closing Price and Opening Price")
+plt.show()
