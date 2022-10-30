@@ -1,0 +1,9 @@
+import pandas as pd
+sales_data=pd.read_csv(r"C:\Users\Personal\github\python_pandas\sample_data\04 Time Series\sales_data.csv", parse_dates=True, index_col='InvoiceDate')
+#Print to check
+print(sales_data)
+#Separating
+morning_sales=sales_data['Quantity']['2010-12-01']
+#Resampling
+high_sales=morning_sales.resample('H').max().min()
+print(high_sales)
