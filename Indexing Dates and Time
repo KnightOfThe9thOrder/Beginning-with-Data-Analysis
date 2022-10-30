@@ -1,0 +1,17 @@
+import pandas as pd
+sales_data=pd.read_csv(r"C:\Users\Personal\github\python_pandas\sample_data\04 Time Series\sales_data.csv", parse_dates=True, index_col='InvoiceDate')
+#Print Sales_Data to check whether it is working
+print(sales_data)
+#Print .info()
+print(sales_data.info())
+#Use .loc accessor
+morning_sales=sales_data.loc['2010-12-01 08:35:00 ']
+print(morning_sales)
+print(" ")
+#To be more specific
+morning_sales_description=sales_data.loc['2010-12-01 08:35:00', 'Description']
+print(morning_sales_description)
+print(" ")
+#To have a range of information 
+morning_sales_8to9=sales_data.loc['2010-12-01 08:00:00':'2010-12-01 09:00:00']
+print(morning_sales_8to9)
