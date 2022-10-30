@@ -1,0 +1,20 @@
+import pandas as pd
+sales_data=pd.read_csv(r"C:\Users\Personal\github\python_pandas\sample_data\04 Time Series\resampling_sales_data.csv", parse_dates=True, index_col='InvoiceDate')
+#Print to check
+print(sales_data)
+print(sales_data.info())
+print(sales_data.head())
+#Find the weekly and monthly sales on average
+weekly_sales=sales_data.resample('W').mean()
+monthly_sales=sales_data.resample('M').mean()
+print("Weekly sales Average is")
+print(weekly_sales)
+print("Monthly sales Average is")
+print(monthly_sales)
+#Other function
+#sum
+weekly_sales1=sales_data.resample('W').sum()
+print(weekly_sales1)
+#count
+weekly_sales2=sales_data.resample('W').count()
+print(weekly_sales2)
