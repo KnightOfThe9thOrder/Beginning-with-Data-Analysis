@@ -7,3 +7,8 @@ morning_sales=sales_data['Quantity']['2010-12-01']
 #Resampling
 high_sales=morning_sales.resample('H').max().min()
 print(high_sales)
+#Further Filtering
+search=sales_data['Description'].str.contains("POPPY") #Will search for Poppy and return Boolean
+print(search)
+total_poppy_sales=search.resample('H').sum() #Takes True as 1 and False as 0
+print(total_poppy_sales)
